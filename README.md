@@ -116,8 +116,19 @@ python -X utf8 skills/douyin-video-knowledge/scripts/test_runtime.py
 
 Five offline tests cover initialization/overwrite protection, date filtering, text comparison, coverage audit/index generation, and Python source compilation. They use temporary fixtures, without contacting Douyin or downloading models.
 
-## Components
+## Acknowledgements
 
-[Playwright](https://github.com/microsoft/playwright) · [faster-whisper](https://github.com/SYSTRAN/faster-whisper) · [RapidOCR](https://github.com/RapidAI/RapidOCR) · [PyAV](https://github.com/PyAV-Org/PyAV)
+Thank you to the maintainers and contributors of the open-source projects used or evaluated in this workflow:
 
-Dependencies retain their respective licenses. Third-party source code, model weights, and creator media are not redistributed here.
+| Project | Role in this workflow |
+| --- | --- |
+| [F2 — Johnserf-Seed/f2](https://github.com/Johnserf-Seed/f2) | Installed and evaluated during the original Douyin collection work. F2 is not a runtime dependency of this release; the packaged collector uses normal page requests from a user-authenticated browser instead. |
+| [Playwright — Microsoft](https://github.com/microsoft/playwright) | Browser automation and public-post catalog collection. |
+| [faster-whisper — SYSTRAN](https://github.com/SYSTRAN/faster-whisper) | Local speech transcription. |
+| [RapidOCR — RapidAI](https://github.com/RapidAI/RapidOCR) | On-screen subtitle and text recognition. |
+| [PyAV](https://github.com/PyAV-Org/PyAV) | Audio/video stream validation and frame decoding. |
+| [ONNX Runtime — Microsoft](https://github.com/microsoft/onnxruntime) | Inference runtime used by the OCR pipeline, with optional hardware acceleration. |
+
+The speech model is downloaded separately from [SYSTRAN's faster-whisper model repository](https://huggingface.co/Systran/faster-whisper-small). Credit for upstream libraries and models belongs to their respective authors; this project packages the workflow and integration scripts and does not imply upstream endorsement or affiliation.
+
+Dependencies and model weights retain their respective licenses and usage terms. Please consult the upstream repositories before use or redistribution. Third-party source code, model weights, and creator media are not redistributed here.

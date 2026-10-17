@@ -116,8 +116,19 @@ python -X utf8 skills/douyin-video-knowledge/scripts/test_runtime.py
 
 五项离线测试覆盖初始化与防覆盖、日期筛选、文本对照、覆盖审计与索引生成、Python 源码编译。测试使用临时数据，不连接抖音，也不下载模型。
 
-## 主要组件
+## 开源致谢
 
-[Playwright](https://github.com/microsoft/playwright) · [faster-whisper](https://github.com/SYSTRAN/faster-whisper) · [RapidOCR](https://github.com/RapidAI/RapidOCR) · [PyAV](https://github.com/PyAV-Org/PyAV)
+感谢以下开源项目的维护者与贡献者。本流程使用或曾评估这些项目：
 
-依赖遵循各自许可证。本仓库不重新分发第三方源码、模型权重或创作者媒体。
+| 项目 | 在本流程中的作用 |
+| --- | --- |
+| [F2 — Johnserf-Seed/f2](https://github.com/Johnserf-Seed/f2) | 原始抖音采集任务中安装并评估过。F2 不是本发布版的运行依赖；当前采集脚本采用用户登录浏览器正常加载的页面请求。 |
+| [Playwright — Microsoft](https://github.com/microsoft/playwright) | 浏览器自动化与公开作品目录采集。 |
+| [faster-whisper — SYSTRAN](https://github.com/SYSTRAN/faster-whisper) | 本地语音转写。 |
+| [RapidOCR — RapidAI](https://github.com/RapidAI/RapidOCR) | 画面字幕与文字识别。 |
+| [PyAV](https://github.com/PyAV-Org/PyAV) | 音视频流校验与视频帧解码。 |
+| [ONNX Runtime — Microsoft](https://github.com/microsoft/onnxruntime) | OCR 推理运行时，并提供可选的硬件加速。 |
+
+语音模型另行从 [SYSTRAN 的 faster-whisper 模型仓库](https://huggingface.co/Systran/faster-whisper-small)下载。上游库与模型的贡献归各自作者所有；本项目提供工作流整理与集成脚本，不代表获得上游项目背书或存在隶属关系。
+
+依赖与模型权重保留各自许可证及使用条款，使用或再分发前请查看上游仓库。本仓库不重新分发第三方源码、模型权重或创作者媒体。
