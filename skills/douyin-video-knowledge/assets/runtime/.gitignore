@@ -1,0 +1,15 @@
+.capture-browser/
+.venv*/
+node_modules/
+__pycache__/
+*.pyc
+config.json
+capture/
+media/
+models/
+packages/
+logs/
+knowledge/
+manifest.jsonl*
+*.partial
+*.download

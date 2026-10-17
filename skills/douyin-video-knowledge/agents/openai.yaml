@@ -1,0 +1,4 @@
+interface:
+  display_name: "抖音口播知识库"
+  short_description: "批量采集公开视频，本地转写与字幕核对，生成可追溯的离线知识库"
+  default_prompt: "使用 $douyin-video-knowledge，按指定账号和日期范围批量整理公开视频，建立带来源与时间戳的知识库。"
